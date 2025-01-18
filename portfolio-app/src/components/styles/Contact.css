@@ -1,0 +1,119 @@
+.contact {
+    position: relative; /* Ensure absolute positioning inside works */
+    margin-top: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+.linkedin-card {
+    position: absolute; /* Absolute positioning */
+    top: 400px; /* Fixed vertical position */
+    left: 500px; /* Fixed horizontal position */
+    width: 150px; /* Fixed width */
+    height: 430px; /* Adjust height based on content */
+    background-color: rgb(29, 29, 29);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+}
+
+.linkedin-card img {
+    width: 50px;
+    background-color: transparent;
+}
+
+.linkedin-card a {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    background-color: transparent;
+}
+
+.email-card {
+    position: absolute; /* Absolute positioning */
+    right: 560px; /* Fixed horizontal position */
+    top: 400px; /* Fixed vertical position */
+    width: 200px; /* Fixed width */
+    height: 229px; /* Fixed height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(29, 29, 29);
+    border-radius: 12px;
+}
+
+.email-card p {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.email-card img, .email-card a {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+}
+
+.github-card img, .github-card a {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+}
+
+.github-card p {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.github-card {
+    position: absolute; /* Absolute positioning */
+    right: 560px; /* Fixed horizontal position */
+    top: 640px; /* Fixed vertical position */
+    width: 200px; /* Fixed width */
+    height: 229px; /* Fixed height */
+    background-color: rgb(29, 29, 29);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Responsive Design (adjusting only the positioning, not size) */
+@media (max-width: 768px) {
+    .contact {
+        height: auto;
+        margin-top: 100px; /* Adjust spacing */
+    }
+
+    .linkedin-card,
+    .email-card,
+    .github-card {
+        position: absolute; /* Keep absolute positioning */
+        width: 200px; /* Fixed size */
+    }
+
+    .linkedin-card {
+        top: 100px; /* Fixed vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center the card horizontally */
+    }
+
+    .email-card {
+        top: 200px; /* Fixed vertical position */
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .github-card {
+        top: 300px; /* Fixed vertical position */
+        right: 50%;
+        transform: translateX(50%);
+    }
+}

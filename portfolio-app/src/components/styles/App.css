@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #2E3138;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+  

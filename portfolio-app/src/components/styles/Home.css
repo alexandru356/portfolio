@@ -1,0 +1,399 @@
+
+/* Profile Card */
+.profile-card {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    margin: 450px auto;
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.5s; 
+    opacity: 0;
+}
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    image-rendering: auto;
+}
+
+.name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: #42749494;
+    background-color: transparent;
+}
+
+/* Who card */
+.who-card {
+    position: relative;   
+    width: 650px;
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    margin: 20px auto;    
+    min-height: 200px;   
+    bottom: 1096px;
+    left: 165px;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 1s; /* Adjust delay for staggered effect */
+    opacity: 0;
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.who-card .header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: hsl(0, 0%, 100%);
+    background-color: transparent;
+}
+
+.who-card .text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: rgb(199, 199, 199);
+    line-height: 1.5;
+    background-color: transparent;
+}
+
+.mtl {
+    position: relative;
+    background-color: transparent;
+    color: #42749494;
+    cursor: pointer;
+}
+.mtl::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #42749494;
+    transition: width 0.3s ease; 
+    
+}
+
+.mtl:hover::after {
+    width: 100%; 
+}
+
+.userIcon {
+    width: 35px;
+    height: auto;
+    margin-top: 5px;
+    margin-right: 1px;
+    background-color: transparent;
+}
+.techicon{
+    width: 35px;
+    height: auto;
+    margin-top: 5px;
+    margin-right: 7px;
+    background-color: transparent;
+}
+
+/* Tech card */
+.tech-card {
+    position: relative;
+    z-index: 10;
+    width: 280px;
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    text-align: center;
+    height: 320px;
+    margin: 50px auto;
+    bottom: 1135px;
+    left: 350px;
+    animation: slideRight 1s ease-out forwards;
+    animation-delay: 1.5s; 
+    opacity: 0;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.tech-card .header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    background-color: transparent;
+}
+
+.tech-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+}
+
+.tech-icon:hover {
+    transform: scale(1.2);
+}
+
+.profile-card, .who-card, .tech-card, .edu-card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover, .who-card:hover, .tech-card:hover, .edu-card:hover{
+    transform: scale(1.02); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Education Card */
+.edu-card {
+    position: relative;
+    z-index: 10;
+    width: 650px;
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    text-align: center;
+    margin: 50px auto;
+    bottom: 1175px;
+    left: 164px;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 2s; /* Adjust delay for staggered effect */
+    opacity: 0;
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-200px); /* Off-screen */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.edu-card .header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent;
+}
+
+.edu-item {
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.edu-title {
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: bold;
+    color: #42749494;
+    margin-bottom: 5px;
+}
+
+.edu-subtitle {
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    font-size: 18px;
+    color: rgb(199, 199, 199);
+    margin-bottom: 5px;
+}
+
+.edu-duration {
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    font-size: 16px;
+    color: rgb(150, 150, 150);
+}
+.background{
+    position: relative;
+    z-index: 10;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 50px auto;
+    bottom: 2117px;
+    left: -365px;
+    background-color: transparent;
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 1s; /* Adjust delay for staggered effect */
+    opacity: 0;
+}
+.bgpicture{
+    transition: transform 0.3s ease;
+}
+.bgpicture:hover{
+    transform: scale(1.02);
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.bgpicture{
+    width: 350px;
+    height: 870px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+
+    .bgpicture {
+        width: 80%; 
+        max-width: 320px;
+        margin: 20px auto; 
+    }
+    .profile-card {
+        margin: 200px auto;
+        width: 90%;
+        height: auto;
+    }
+
+    .who-card {
+        position: relative;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 650px;
+        margin-top: 20px;
+        min-height: auto;  
+        bottom: auto;      
+        left: auto;       
+    }
+
+
+    .tech-card {
+        position: relative;
+        margin: 20px auto;
+        width: 90%;
+        height: auto;
+        bottom: auto;
+        left: auto;
+    }
+
+    .tech-icons {
+        gap: 15px;
+    }
+
+    .tech-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .who-card .text {
+        font-size: 20px;
+    }
+
+    .who-card .header {
+        font-size: 25px;
+    }
+
+    .tech-card .header {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        margin: 60px auto;
+        width: 100%;
+        height: auto;
+    }
+    .bgpicture {
+        width: 100%; 
+        max-width: 300px;
+    }
+    .who-card {
+        width: 100%;
+        margin: 20px auto;
+        bottom: auto;  
+        left: auto;    
+    }
+
+    .tech-card {
+        width: 100%;
+        margin: 20px auto;
+        bottom: auto;  
+        left: auto;     
+    }
+
+    .tech-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .who-card .text {
+        font-size: 18px;
+    }
+
+    .who-card .header {
+        font-size: 20px;
+    }
+
+    .tech-card .header {
+        font-size: 20px;
+    }
+}
