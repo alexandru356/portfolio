@@ -9,12 +9,14 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Disable scrolling by default */
+    overflow: hidden; 
 }
 
 body {
-    min-height: 100%; /* Ensure body takes full height */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    min-height: 100%; 
+    overflow-x: hidden; 
+    max-height: 50vh;
+    overflow-y: auto; 
 }
 
 /* Enable scrolling on mobile */
