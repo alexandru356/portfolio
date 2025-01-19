@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+/media/alexandru/One Touch/Projects/portfolio-app/.metadata/.plugins/org.eclipse.jdt.core
+2714093465.index
+4057625467.index
+1865797976.index
+2054852854.index
