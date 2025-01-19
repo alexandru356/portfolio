@@ -17,21 +17,20 @@
     border-radius: 12px;
     width: 100%;
     max-width: 600px;
-    flex-direction: column; /* Adjust layout to stack items */
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Start slightly below */
-    animation: fadeInUp 0.8s ease-out forwards; /* Fade-in and move-up animation */
+    flex-direction: column;
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 .project-card:nth-child(1) {
-    animation-delay: 0.2s; /* Delay for the first card */
+    animation-delay: 0.2s;
 }
 
 .project-card:nth-child(2) {
-    animation-delay: 0.4s; /* Delay for the second card */
+    animation-delay: 0.4s; 
 }
-
 .project-card:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for the third card */
+    animation-delay: 0.6s; 
 }
 @keyframes fadeInUp {
     0% {
@@ -108,4 +107,17 @@
 .alink:hover {
     transform: scale(1.02);
     background-color: rgb(199, 199, 199);
+}
+@media (max-width: 768px) {
+    .projects-container {
+        gap: 10px; 
+    }
+
+    .project-card {
+        width: 90%; 
+        max-width: 90%; 
+       display: flex;
+       justify-content: center;
+       align-items: center; 
+    }
 }

@@ -9,8 +9,9 @@
     display: flex;
     justify-content: center;
     animation: fall 0.8s ease-out forwards;
+    background-color: transparent;
 }
-@keyframes fall{
+@keyframes fall {
     0% {
         top: -100px;
     }
@@ -64,4 +65,19 @@
 .navbar a:hover,
 .navbar a.active {
     transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease, transform 0.3s ease;
+}
+
+/* Center navbar items on mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        margin-top: 10px;
+        padding: 2px;
+        justify-content: center; /* Centers the navbar items horizontally */
+    }
+    .navbar ul {
+        flex-direction: row; /* Ensures items are displayed in a row */
+        justify-content: center; /* Centers the list items */
+    }
+
 }

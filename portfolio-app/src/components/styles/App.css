@@ -1,13 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     background-color: #2E3138;
 }
+
 html {
     scroll-behavior: smooth;
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; 
+    overflow: hidden; /* Disable scrolling by default */
 }
-  
+
+body {
+    min-height: 100%; /* Ensure body takes full height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Enable scrolling on mobile */
+@media (max-width: 768px) {
+    html {
+        min-height: 70%;
+        overflow: auto; /* Enable scrolling only on mobile */
+    }
+}

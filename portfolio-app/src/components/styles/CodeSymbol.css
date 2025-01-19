@@ -1,0 +1,70 @@
+.symbols-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space the symbols vertically */
+  align-items: center;
+  flex-wrap: wrap; /* Allow the symbols to wrap into multiple rows */
+  pointer-events: none; /* Prevent interaction with the symbols */
+  z-index: 1;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.left {
+  left: 5%; /* Position symbols on the left */
+  width: 5%; /* Width of the left container */
+}
+
+.right {
+  right: 5%; /* Position symbols on the right */
+  width: 5%; /* Width of the right container */
+}
+
+.code-symbol {
+  font-size: 30px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  animation: bounceUpDown 5s infinite ease-in-out, glow 1.5s ease-in-out infinite alternate;
+  pointer-events: none;
+  text-align: center;
+  margin: 10px; /* Add space between symbols */
+  background-color: transparent;
+}
+
+/* Bouncing animation (Up and Down) */
+@keyframes bounceUpDown {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-50px) translateX(50px);
+  }
+  50% {
+    transform: translateY(0) translateX(0px);
+  }
+  75% {
+    transform: translateY(50px) translateX(50px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Glowing effect */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ffffff, 0 0 10px #29475af6, 0 0 15px #29475af6, 0 0 20px #29475af6;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #29475af6, 0 0 30px #29475af6, 0 0 40px #29475af6;
+  }
+}
+
+@media (max-width: 768px) {
+  .symbols-container {
+    display: none;
+  }
+}

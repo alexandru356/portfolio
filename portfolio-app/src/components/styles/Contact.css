@@ -1,119 +1,241 @@
-.contact {
-    position: relative; /* Ensure absolute positioning inside works */
-    margin-top: 20px;
-    height: 100vh;
-    width: 100%;
-}
-
 .linkedin-card {
-    position: absolute; /* Absolute positioning */
-    top: 400px; /* Fixed vertical position */
-    left: 500px; /* Fixed horizontal position */
-    width: 150px; /* Fixed width */
-    height: 430px; /* Adjust height based on content */
+    position: relative;
+    z-index: 10;
+    width: 300px;
+    height: 500px;
     background-color: rgb(29, 29, 29);
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
+    margin: 50px auto;
+    bottom: -200px;
+    left: -150px;
+    animation: slideFromLeft 0.7s ease-out forwards;
 }
-
-.linkedin-card img {
-    width: 50px;
+.linkedin-card:hover{
+    background-color: #007ebb;
+    transition: 0.5s;
+}
+.linkedin-card img{
+    width: auto;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 220px;
+}
+.atag{
+    width: 300px;
+    height: 500px;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin: -20px -20px;
     background-color: transparent;
 }
-
-.linkedin-card a {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    background-color: transparent;
-}
-
 .email-card {
-    position: absolute; /* Absolute positioning */
-    right: 560px; /* Fixed horizontal position */
-    top: 400px; /* Fixed vertical position */
-    width: 200px; /* Fixed width */
-    height: 229px; /* Fixed height */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    width: 300px;
+    height: 200px;
     background-color: rgb(29, 29, 29);
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    margin: 50px auto;
+    bottom: 390px;
+    left: 200px;
+    animation: slideFromTop 0.7s ease-out forwards;
 }
-
-.email-card p {
-    color: hsl(0, 0%, 100%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 19px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.email-card img, .email-card a {
-    width: 35px;
-    height: 35px;
+.email-card a{
     background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
 }
-
-.github-card img, .github-card a {
-    width: 35px;
-    height: 35px;
+.bubble-email{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    background-color:#2E3138;
+    border-radius: 12px;
+    margin-top: 75px;
+    height: 50px;
+}
+.bubble-email:hover{
+    background-color: rgb(60, 60, 60);
+    transition: 0.5s;
+    transform: scale(1.08);
+}
+.text{
     background-color: transparent;
-}
-
-.github-card p {
-    color: hsl(0, 0%, 100%);
     font-family: 'Roboto', sans-serif;
-    font-size: 19px;
-    font-weight: 500;
-    margin-bottom: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: -270px;
+    margin-right: 20px;
 }
-
+.mailicon{
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
+    margin-right: 290px;
+    margin-top: 3px;
+}
 .github-card {
-    position: absolute; /* Absolute positioning */
-    right: 560px; /* Fixed horizontal position */
-    top: 640px; /* Fixed vertical position */
-    width: 200px; /* Fixed width */
-    height: 229px; /* Fixed height */
+    position: relative;
+    z-index: 10;
+    width: 300px;
+    height: 250px;
     background-color: rgb(29, 29, 29);
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    margin: 50px auto;
+    bottom: 430px;
+    left: 200px;
+    animation: slideFromBottom 0.7s ease-out forwards;
+}
+.gitag{
+    background-color: transparent;
+    width: 300px;
+    height: 250px;
+    padding: 20px;
+    margin: -20px;
+    border-radius: 12px;
+}
+.gitag:hover{
+    background-color: rgb(60, 60, 60);
+    transition: 0.5s;
+
+}
+.gitH1{
+    text-decoration: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+.gitP{
+    margin-top: 15px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+.linkedin-card img,
+.email-card img,
+.github-card img {
+    background-color: transparent;
+}
+.linkedin-card a,
+.email-card a,
+.github-card a {
+    text-decoration: none;
+    background-color: transparent;
+}
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-
-
-/* Responsive Design (adjusting only the positioning, not size) */
-@media (max-width: 768px) {
-    .contact {
-        height: auto;
-        margin-top: 100px; /* Adjust spacing */
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
     }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
 
     .linkedin-card,
     .email-card,
     .github-card {
-        position: absolute; /* Keep absolute positioning */
-        width: 200px; /* Fixed size */
+        width: 90%;
+        left: 5%;
+        transform: translateX(0);
     }
 
     .linkedin-card {
-        top: 100px; /* Fixed vertical position */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center the card horizontally */
+        top: 30px;
     }
 
     .email-card {
-        top: 200px; /* Fixed vertical position */
-        right: 50%;
-        transform: translateX(50%);
+        top: 200px;
     }
 
     .github-card {
-        top: 300px; /* Fixed vertical position */
-        right: 50%;
-        transform: translateX(50%);
+        top: 350px;
+    }
+}
+@media (max-width: 768px) {
+    .linkedin-card,
+    .email-card,
+    .github-card {
+        width: 30%;  /* Make cards smaller on tablets and mobile */
+        height: auto;  /* Auto height for better scaling */
+        margin: 20px auto;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .linkedin-card {
+        top: 30px;
+    }
+
+    .email-card {
+        top: 180px;
+    }
+
+    .github-card {
+        top: 330px;
+    }
+}
+
+@media (max-width: 480px) {
+    .linkedin-card,
+    .email-card,
+    .github-card {
+        width: 70%;  /* Full width cards on smaller screens */
+        height: auto;  /* Let cards grow based on content */
+        margin: 60px auto;
+        left: 0;
+    }
+
+    .linkedin-card {
+        top: 20px;
+    }
+
+    .email-card {
+        top: 20px;
+        
+    }
+
+    .github-card {
+        top: 20px;
     }
 }
