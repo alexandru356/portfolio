@@ -6,23 +6,21 @@
 
 html {
     scroll-behavior: smooth;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100%; 
     overflow: hidden; 
 }
 
 body {
-    min-height: 100%; 
-    overflow-x: hidden; 
-    max-height: 50vh;
-    overflow-y: auto; 
+    max-height: 200vh; 
+    overflow-y: scroll;
 }
 
-/* Enable scrolling on mobile */
+
 @media (max-width: 768px) {
     html {
-        min-height: 70%;
-        overflow: auto; /* Enable scrolling only on mobile */
+        overflow: auto; 
+    }
+    body {
+        max-height: 200vh; 
     }
 }

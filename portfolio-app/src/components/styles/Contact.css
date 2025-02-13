@@ -187,7 +187,15 @@
     .email-card {
         top: 200px;
     }
-
+    .email-card img{
+        width: 25px;
+        height: auto;
+        margin-left: 15px;
+    }
+    .bubble-email{
+        margin-top: 10px;
+        
+    }
     .github-card {
         top: 350px;
     }
@@ -210,7 +218,15 @@
     .email-card {
         top: 180px;
     }
-
+    .email-card img{
+        width: 25px;
+        height: auto;
+        margin-left: 15px;
+    }
+    .bubble-email{
+        margin-top: 10px;
+        
+    }
     .github-card {
         top: 330px;
     }
@@ -229,13 +245,32 @@
     .linkedin-card {
         top: 20px;
     }
-
+        .linkedin-card img{
+        margin-right: 20px;
+    }
     .email-card {
         top: 20px;
         
     }
-
+    .email-card img{
+        width: 25px;
+        height: auto;
+        margin-left: 15px;
+    }
+    .bubble-email{
+        margin-top: 10px;
+        
+    }
     .github-card {
         top: 20px;
+    }
+    .gitag{
+        width: 270px;
+    }
+}
+@media screen and (max-height: 900px),
+        screen and (max-width: 480px) {
+    .gitag{
+        width: 300px;
     }
 }

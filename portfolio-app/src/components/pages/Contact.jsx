@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="linkedin-card">
         <a
           className=""
-          href="https://www.linkedin.com/in/yourprofile/"
+          href="https://www.linkedin.com/in/alexandru356"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -16,6 +16,9 @@ import Resume from "/resume/Resume2025.pdf";
 import link from '/src/components/img/link.png';
 
 function Home() {
+
+  
+
   return (
     <>
       <div className="profile-card">
